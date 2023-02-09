@@ -1,3 +1,294 @@
-h1{
-    font-size: 40px;
+/*-------------------------------------------------------------------
+Typography
+-------------------------------------------------------------------*/
+
+@font-face {
+    font-family: nasalization;
+    src: url('/wp-content/themes/enertec/dist/fonts/nasalization-rg.ttf')
 }
+
+$mainFont: sans-serif;
+$detailFont: nasalization;
+
+$contentFontSize: 14px;
+$contentFontSizeBigger: 16px;
+
+p {
+    margin: 0;
+}
+
+/*-------------------------------------------------------------------
+Colors
+-------------------------------------------------------------------*/
+
+$colorBlack: #222;
+$colorGray: #eee;
+$colorBlue: #0e06ff;
+$colorLightGreen: #03e944;
+$colorCyan: #19e7d1;
+$colorLeafGreen: #1bd741;
+$colorDarkGreen: #328542;
+
+$gradientHorizontal: linear-gradient(90deg, $colorLightGreen, $colorCyan);
+
+/*-------------------------------------------------------------------
+Transition
+-------------------------------------------------------------------*/
+
+%transition {
+    transition: all 300ms;
+}
+
+/*-------------------------------------------------------------------
+Flex
+-------------------------------------------------------------------*/
+
+.l-flex {
+    display: flex;
+}
+
+.l-flex--center {
+    justify-content: center;
+    align-items: center;
+}
+
+.l-flex--stretch {
+    align-items: stretch;
+}
+
+.l-flex--wrap {
+    flex-wrap: wrap;
+}
+
+.l-flex--negative {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.l-flex__left {
+    margin-right: auto;
+}
+
+.l-flex__right {
+    margin-left: auto;
+}
+
+%flexColPatterns {
+    padding: 12px;
+}
+
+.l__col-2-4 {
+    @extend %flexColPatterns;
+    width: 20%;
+}
+
+.l__col-3 {
+    @extend %flexColPatterns;
+    width: 25%;
+}
+
+.l__col-4 {
+    @extend %flexColPatterns;
+    width: 33.33%;
+}
+
+.l__col-6 {
+    @extend %flexColPatterns;
+    width: 50%;
+}
+
+.l__col-8 {
+    @extend %flexColPatterns;
+    width: 66.66%;
+}
+
+.l__col-9 {
+    @extend %flexColPatterns;
+    width: 75%;
+}
+
+.l__col-9-6 {
+    @extend %flexColPatterns;
+    width: 80%;
+}
+
+/*-------------------------------------------------------------------
+General
+-------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-size: $contentFontSize;
+    font-family: $mainFont;
+}
+
+img {
+    max-width: 100%;
+}
+
+.c__center {
+    text-align: center;
+}
+
+a {
+    @extend %transition;
+    text-decoration: none;
+    opacity: .8;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.c__container {
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1200px;
+}
+
+/*-------------------------------------------------------------------
+Header
+-------------------------------------------------------------------*/
+
+.c-header {
+    position: fixed;
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 10%) 0 0 10px 3px;
+
+    .c-header__top {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: $gradientHorizontal;
+
+        .c-nav {
+            .c-nav__link {
+                margin-right: 20px;
+                font-family: $detailFont;
+                color: white;
+
+                img {
+                    margin-right: 5px;
+                    vertical-align: middle;
+                }
+            }
+
+            &:last-child {
+                .c-nav__link {
+
+                    margin-right: 10px;
+
+                    &:last-child {
+                        margin-right: 0;
+
+                        img {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .c-header__bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: $contentFontSizeBigger;
+
+        .c-header__logo {
+            opacity: 1;
+        }
+
+        .c-nav {
+            .c-nav__link {
+                display: inline-block;
+                position: relative;
+                margin-right: 20px;
+                color: $colorBlack;
+                font-family: $detailFont;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:before {
+                    @extend %transition;
+                    content: '';
+                    position: absolute;
+                    bottom: -8px;
+                    width: 100%;
+                    height: 3px;
+                    background: $gradientHorizontal;
+                    transform: scale(0);
+                    transform-origin: left;
+                    opacity: 0;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $colorBlue;
+
+                    &:before {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*-------------------------------------------------------------------
+Buttons
+-------------------------------------------------------------------*/
+.c__button {
+    display: inline-block;
+    position: relative;
+    padding: 14px;
+    color: $colorBlue;
+    font-family: $detailFont;
+    font-weight: 600;
+
+    &:before {
+        @extend %transition;
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        padding: 2px;
+        background: $gradientHorizontal;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    &:hover,
+    &:focus {
+        color: white;
+
+        &:before {
+            background: $colorBlue;
+            -webkit-mask: none;
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+    }
+}
+
+/*-------------------------------------------------------------------
+Responsive
+-------------------------------------------------------------------*/
