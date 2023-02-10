@@ -1,4 +1,4 @@
-<section class="c-section c-section--video-bg c__center">
+<section class="c-section c-section--video-bg c__center" id="inicio">
 
     <video autoplay loop muted playsinline>
         <source src="<?= getThemeVideo('video-main.mp4') ?>">

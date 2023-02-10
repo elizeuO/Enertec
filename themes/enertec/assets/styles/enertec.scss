@@ -1,4 +1,19 @@
 /*-------------------------------------------------------------------
+Colors
+-------------------------------------------------------------------*/
+
+$colorBlack: #222;
+$colorGray: #eee;
+$colorDarkGray: #ccc;
+$colorBlue: #0e06ff;
+$colorLightGreen: #03e944;
+$colorCyan: #19e7d1;
+$colorLeafGreen: #1bd741;
+$colorDarkGreen: #15a932;
+
+$gradientHorizontal: linear-gradient(90deg, $colorLightGreen, $colorCyan);
+
+/*-------------------------------------------------------------------
 Typography
 -------------------------------------------------------------------*/
 
@@ -15,29 +30,37 @@ $contentFontSizeBigger: 16px;
 $titleFontSize: 35px;
 $titleFontSizeBigger: 68px;
 
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
 p {
     margin: 0;
 }
 
 .c-title {
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
     font-size: $titleFontSize;
+    line-height: 35px;
     font-family: $detailFont;
 }
 
-/*-------------------------------------------------------------------
-Colors
--------------------------------------------------------------------*/
+.c-title--decoration {
+    position: relative;
 
-$colorBlack: #222;
-$colorGray: #eee;
-$colorBlue: #0e06ff;
-$colorLightGreen: #03e944;
-$colorCyan: #19e7d1;
-$colorLeafGreen: #1bd741;
-$colorDarkGreen: #328542;
+    &:before {
+        content: "";
+        display: block;
+        margin-bottom: 20px;
+        width: 24%;
+        height: 5px;
+        background: $gradientHorizontal;
 
-$gradientHorizontal: linear-gradient(90deg, $colorLightGreen, $colorCyan);
+    }
+}
 
 /*-------------------------------------------------------------------
 Transition
@@ -152,6 +175,7 @@ img {
 
 a {
     @extend %transition;
+    display: inline-block;
     text-decoration: none;
     opacity: .8;
 
@@ -175,7 +199,9 @@ Header
 .c-header {
     position: fixed;
     width: 100%;
+    background: white;
     box-shadow: rgb(0 0 0 / 10%) 0 0 10px 3px;
+    z-index: 99;
 
     .c-header__top {
         padding-top: 10px;
@@ -301,12 +327,36 @@ Buttons
     }
 }
 
+.c__button-green {
+    margin-top: 25px;
+    padding: 14px;
+    background: $colorLeafGreen;
+    font-family: $detailFont;
+    color: white;
+    border-radius: 10px;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+        background: $colorDarkGreen;
+    }
+
+    img {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
 /*-------------------------------------------------------------------
 Sections
 -------------------------------------------------------------------*/
 .c-section {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.c-section--gray {
+    background: $colorGray;
 }
 
 .c-section--video-bg {
@@ -376,6 +426,93 @@ Sections
         }
 
     }
+}
+
+.c-section--solar-bg {
+    background: url('/wp-content/themes/enertec/dist/img/bg-solar.png') center center no-repeat;
+    background-size: cover;
+    background-color: inherit;
+}
+
+/*-------------------------------------------------------------------
+Forms
+-------------------------------------------------------------------*/
+form {
+    position: relative;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 10%) 0 0 10px 3px;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 50%;
+        width: 40%;
+        height: 3px;
+        background: $gradientHorizontal;
+        border-radius: 20px;
+        transform: translateX(-50%);
+    }
+
+    br {
+        display: none;
+    }
+
+    input,
+    textarea,
+    select {
+        @extend %transition;
+        position: relative;
+        padding: 8px;
+        width: 100%;
+        border: none;
+        background: none;
+        z-index: 2;
+
+        &::placeholder {
+            color: $colorDarkGray;
+        }
+
+        &:focus {
+           outline: none;
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        position: absolute;
+        top: 170%;
+        left: 8px;
+    }
+
+    p:has(.wpcf7-form-control-wrap) {
+        display: inline-block;
+        position: relative;
+
+        &:before {
+            @extend %transition;
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            padding: 1px;
+            background: $colorDarkGray;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+        }
+
+        &:has(input:focus, select:focus, textarea:focus):before {
+            @extend %transition;
+            content: "";
+            background: $gradientHorizontal;
+        }
+    }
+
 }
 
 /*-------------------------------------------------------------------

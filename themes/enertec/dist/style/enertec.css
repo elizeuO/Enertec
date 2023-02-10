@@ -1,27 +1,49 @@
 /*-------------------------------------------------------------------
+Colors
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
 Typography
 -------------------------------------------------------------------*/
 @font-face {
   font-family: nasalization;
   src: url("/wp-content/themes/enertec/dist/fonts/nasalization-rg.ttf");
 }
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
 p {
   margin: 0;
 }
 
 .c-title {
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 20px;
   font-size: 35px;
+  line-height: 35px;
   font-family: nasalization;
 }
 
-/*-------------------------------------------------------------------
-Colors
--------------------------------------------------------------------*/
+.c-title--decoration {
+  position: relative;
+}
+.c-title--decoration:before {
+  content: "";
+  display: block;
+  margin-bottom: 20px;
+  width: 24%;
+  height: 5px;
+  background: linear-gradient(90deg, #03e944, #19e7d1);
+}
+
 /*-------------------------------------------------------------------
 Transition
 -------------------------------------------------------------------*/
-.c__button:before, .c-header .c-header__bottom .c-nav .c-nav__link:before, a {
+form p:has(.wpcf7-form-control-wrap):has(input:focus, select:focus, textarea:focus):before, form p:has(.wpcf7-form-control-wrap):before, form input,
+form textarea,
+form select, .c__button:before, .c-header .c-header__bottom .c-nav .c-nav__link:before, a {
   transition: all 300ms;
 }
 
@@ -120,6 +142,7 @@ img {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   opacity: 0.8;
 }
@@ -140,7 +163,9 @@ Header
 .c-header {
   position: fixed;
   width: 100%;
+  background: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 3px;
+  z-index: 99;
 }
 .c-header .c-header__top {
   padding-top: 10px;
@@ -235,12 +260,33 @@ Buttons
   z-index: -1;
 }
 
+.c__button-green {
+  margin-top: 25px;
+  padding: 14px;
+  background: #1bd741;
+  font-family: nasalization;
+  color: white;
+  border-radius: 10px;
+  opacity: 1;
+}
+.c__button-green:hover, .c__button-green:focus {
+  background: #15a932;
+}
+.c__button-green img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 /*-------------------------------------------------------------------
 Sections
 -------------------------------------------------------------------*/
 .c-section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.c-section--gray {
+  background: #eee;
 }
 
 .c-section--video-bg {
@@ -312,6 +358,88 @@ Sections
     bottom: 20px;
     opacity: 0.8;
   }
+}
+
+.c-section--solar-bg {
+  background: url("/wp-content/themes/enertec/dist/img/bg-solar.png") center center no-repeat;
+  background-size: cover;
+  background-color: inherit;
+}
+
+/*-------------------------------------------------------------------
+Forms
+-------------------------------------------------------------------*/
+form {
+  position: relative;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 3px;
+}
+form:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 40%;
+  height: 3px;
+  background: linear-gradient(90deg, #03e944, #19e7d1);
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+form br {
+  display: none;
+}
+form input,
+form textarea,
+form select {
+  position: relative;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  background: none;
+  z-index: 2;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder, form select::-moz-placeholder {
+  color: #ccc;
+}
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder, form select:-ms-input-placeholder {
+  color: #ccc;
+}
+form input::placeholder,
+form textarea::placeholder,
+form select::placeholder {
+  color: #ccc;
+}
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+}
+form .wpcf7-not-valid-tip {
+  position: absolute;
+  top: 170%;
+  left: 8px;
+}
+form p:has(.wpcf7-form-control-wrap) {
+  display: inline-block;
+  position: relative;
+}
+form p:has(.wpcf7-form-control-wrap):before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 1px;
+  background: #ccc;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+}
+form p:has(.wpcf7-form-control-wrap):has(input:focus, select:focus, textarea:focus):before {
+  content: "";
+  background: linear-gradient(90deg, #03e944, #19e7d1);
 }
 
 /*-------------------------------------------------------------------
