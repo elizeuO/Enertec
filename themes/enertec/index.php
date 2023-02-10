@@ -1,1 +1,4 @@
-<?php include('partials/header.php'); ?>
+<?php include('partials/header.php');
+      include('partials/section-inicio.php');
+
+?>

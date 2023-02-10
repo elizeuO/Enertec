@@ -4,9 +4,16 @@
 add_filter('show_admin_bar', '__return_false');
 
 //Get theme image
-function getThemeImage($image){
-    $path = '/dist/img/'.$image;
-    return get_template_directory_uri().$path;
+function getThemeImage($image)
+{
+    $path = '/dist/img/' . $image;
+    return get_template_directory_uri() . $path;
+}
+
+function getThemeVideo($video)
+{
+    $path = '/dist/video/' . $video;
+    return get_template_directory_uri() . $path;
 }
 
 //Register and enqueue the scripts

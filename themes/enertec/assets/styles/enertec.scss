@@ -12,9 +12,17 @@ $detailFont: nasalization;
 
 $contentFontSize: 14px;
 $contentFontSizeBigger: 16px;
+$titleFontSize: 35px;
+$titleFontSizeBigger: 68px;
 
 p {
     margin: 0;
+}
+
+.c-title {
+    margin-bottom: 40px;
+    font-size: $titleFontSize;
+    font-family: $detailFont;
 }
 
 /*-------------------------------------------------------------------
@@ -63,6 +71,10 @@ Flex
 .l-flex--negative {
     margin-left: -12px;
     margin-right: -12px;
+}
+
+.l-flex--vertical {
+    flex-direction: column;
 }
 
 .l-flex__left {
@@ -145,7 +157,7 @@ a {
 
     &:hover,
     &:focus {
-        opacity: 1;
+        opacity: 1 !important;
     }
 }
 
@@ -286,6 +298,83 @@ Buttons
             mask-composite: exclude;
             z-index: -1;
         }
+    }
+}
+
+/*-------------------------------------------------------------------
+Sections
+-------------------------------------------------------------------*/
+.c-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.c-section--video-bg {
+    position: relative;
+    margin-top: 162px;
+    height: calc(100vh - 162px);
+    color: white;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/wp-content/themes/enertec/dist/img/black-dots.png') center center repeat;
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .c__container {
+        height: 100%;
+    }
+
+    .c-section__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .c-title {
+            font-size: $titleFontSizeBigger;
+            line-height: 64px;
+        }
+
+        p {
+            font-size: $titleFontSize;
+        }
+    }
+
+    .c-section__mouse-icon {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        animation: mouse 1.2s infinite;
+        transform: translateX(-50%);
+    }
+
+    @keyframes mouse {
+        0% {
+            bottom: 35px;
+            opacity: .4;
+        }
+
+        100% {
+            bottom: 20px;
+            opacity: .8;
+        }
+
     }
 }
 
