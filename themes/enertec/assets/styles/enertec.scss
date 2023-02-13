@@ -12,6 +12,7 @@ $colorLeafGreen: #1bd741;
 $colorDarkGreen: #15a932;
 
 $gradientHorizontal: linear-gradient(90deg, $colorLightGreen, $colorCyan);
+$shadow: rgb(0 0 0 / 10%) 0 0 10px 3px;
 
 /*-------------------------------------------------------------------
 Typography
@@ -48,6 +49,11 @@ p {
     font-size: $titleFontSize;
     line-height: 35px;
     font-family: $detailFont;
+}
+
+.c-title__subtitle{
+    color: $colorBlue;
+    font-size: $contentFontSizeBigger;
 }
 
 .c-title--decoration {
@@ -477,6 +483,31 @@ Sections
 
 }
 
+.c-section--bg-balls {
+    background: url('/wp-content/themes/enertec/dist/img/bg-balls-gray.png') center center no-repeat;
+    background-size: cover;
+
+    .c-explanation {
+        .c-explanation__step {
+            margin-bottom: 18px;
+            padding: 15px 25px;
+            background: white;
+            box-shadow: $shadow;
+            border-radius: 0 20px 20px 0;
+
+            h3 {
+                font-family: $detailFont;
+                color: $colorBlue;
+                font-size: $contentFontSizeBigger;
+            }
+
+            &:nth-child(even){
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
 /*-------------------------------------------------------------------
 Forms
 -------------------------------------------------------------------*/
@@ -485,7 +516,7 @@ form {
     padding: 30px;
     background: white;
     border-radius: 10px;
-    box-shadow: rgb(0 0 0 / 10%) 0 0 10px 3px;
+    box-shadow: $shadow;
 
     &:before {
         content: '';

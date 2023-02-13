@@ -27,6 +27,11 @@ p {
   font-family: nasalization;
 }
 
+.c-title__subtitle {
+  color: #0e06ff;
+  font-size: 16px;
+}
+
 .c-title--decoration {
   position: relative;
 }
@@ -397,6 +402,26 @@ Sections
 .c-section--shape-bg .c-about__value p {
   margin: 0 auto;
   max-width: 70%;
+}
+
+.c-section--bg-balls {
+  background: url("/wp-content/themes/enertec/dist/img/bg-balls-gray.png") center center no-repeat;
+  background-size: cover;
+}
+.c-section--bg-balls .c-explanation .c-explanation__step {
+  margin-bottom: 18px;
+  padding: 15px 25px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 3px;
+  border-radius: 0 20px 20px 0;
+}
+.c-section--bg-balls .c-explanation .c-explanation__step h3 {
+  font-family: nasalization;
+  color: #0e06ff;
+  font-size: 16px;
+}
+.c-section--bg-balls .c-explanation .c-explanation__step:nth-child(even) {
+  margin-left: 40px;
 }
 
 /*-------------------------------------------------------------------
