@@ -38,6 +38,11 @@ p {
   height: 5px;
   background: linear-gradient(90deg, #03e944, #19e7d1);
 }
+.c-title--decoration.c__center:before {
+  margin-left: auto;
+  margin-right: auto;
+  width: 12%;
+}
 
 /*-------------------------------------------------------------------
 Transition
@@ -440,6 +445,30 @@ form p:has(.wpcf7-form-control-wrap):before {
 form p:has(.wpcf7-form-control-wrap):has(input:focus, select:focus, textarea:focus):before {
   content: "";
   background: linear-gradient(90deg, #03e944, #19e7d1);
+}
+
+/*-------------------------------------------------------------------
+Instagram
+-------------------------------------------------------------------*/
+.elfsight-widget-instagram-feed {
+  margin-top: 35px;
+}
+
+.eapps-instagram-feed-posts-grid-load-more {
+  display: none;
+}
+
+#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-overlay {
+  background: linear-gradient(90deg, rgba(3, 233, 68, 0.7607843137), rgba(25, 231, 209, 0.7411764706)) !important;
+}
+
+.eapps-instagram-feed-posts-item-link:hover .eapps-instagram-feed-posts-item-media:after,
+.eapps-instagram-feed-posts-item-link:focus .eapps-instagram-feed-posts-item-media:after {
+  opacity: 1;
+}
+
+.eapps-instagram-feed-posts-item-image {
+  filter: none !important;
 }
 
 /*-------------------------------------------------------------------

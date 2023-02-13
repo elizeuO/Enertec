@@ -61,6 +61,14 @@ p {
         background: $gradientHorizontal;
 
     }
+
+    &.c__center {
+        &:before {
+            margin-left: auto;
+            margin-right: auto;
+            width: 12%;
+        }
+    }
 }
 
 /*-------------------------------------------------------------------
@@ -512,6 +520,30 @@ form {
         }
     }
 
+}
+
+/*-------------------------------------------------------------------
+Instagram
+-------------------------------------------------------------------*/
+.elfsight-widget-instagram-feed {
+    margin-top: 35px;
+}
+
+.eapps-instagram-feed-posts-grid-load-more {
+    display: none;
+}
+
+#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-overlay {
+    background: linear-gradient(90deg, #03e944c2, #19e7d1bd) !important;
+}
+
+.eapps-instagram-feed-posts-item-link:hover .eapps-instagram-feed-posts-item-media:after,
+.eapps-instagram-feed-posts-item-link:focus .eapps-instagram-feed-posts-item-media:after {
+    opacity: 1;
+}
+
+.eapps-instagram-feed-posts-item-image {
+    filter: none !important;
 }
 
 /*-------------------------------------------------------------------
