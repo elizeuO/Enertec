@@ -1,8 +1,9 @@
 <?php include('partials/header.php');
-      include('partials/section-inicio.php');
-      include('partials/section-orcamento.php');
-      include('partials/section-sobre.php');
-      include('partials/section-instagram.php');
+      include('section-inicio.php');
+      include('section-orcamento.php');
+      include('section-sobre.php');
+      include('section-como-funciona.php');
+      include('section-instagram.php');
       include('partials/footer.php');
 
 ?>
