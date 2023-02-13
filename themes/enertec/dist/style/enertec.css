@@ -96,7 +96,7 @@ Flex
   margin-left: auto;
 }
 
-.l__col-9-6, .l__col-9, .l__col-8, .l__col-6, .l__col-4, .l__col-3, .l__col-2-4 {
+.l__col-12, .l__col-9, .l__col-8, .l__col-6, .l__col-4, .l__col-3, .l__col-2-4 {
   padding: 12px;
 }
 
@@ -124,8 +124,8 @@ Flex
   width: 75%;
 }
 
-.l__col-9-6 {
-  width: 80%;
+.l__col-12 {
+  width: 100%;
 }
 
 /*-------------------------------------------------------------------
@@ -151,6 +151,8 @@ img {
 
 .c__center {
   text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 
 a {
@@ -405,7 +407,7 @@ Sections
 }
 
 .c-section--bg-balls {
-  background: url("/wp-content/themes/enertec/dist/img/bg-balls-gray.png") center center no-repeat;
+  background: url("/wp-content/themes/enertec/dist/img/bg-balls-gray.jpg") center center no-repeat;
   background-size: cover;
 }
 .c-section--bg-balls .c-explanation .c-explanation__step {
@@ -466,6 +468,24 @@ Sections
   width: 50%;
 }
 
+.c-section--bg-balls-white {
+  background: url("/wp-content/themes/enertec/dist/img/bg-balls-white.jpg") center center no-repeat;
+  background-size: cover;
+}
+.c-section--bg-balls-white .c-contact {
+  margin-top: 30px;
+}
+.c-section--bg-balls-white .c-contact a {
+  display: block;
+  margin-bottom: 10px;
+}
+.c-section--bg-balls-white .c-contact a:hover, .c-section--bg-balls-white .c-contact a:focus {
+  color: #0e06ff;
+}
+.c-section--bg-balls-white .c-contact img {
+  vertical-align: middle;
+}
+
 /*-------------------------------------------------------------------
 Forms
 -------------------------------------------------------------------*/
@@ -522,7 +542,6 @@ form .wpcf7-not-valid-tip {
   left: 8px;
 }
 form p:has(.wpcf7-form-control-wrap) {
-  display: inline-block;
   position: relative;
 }
 form p:has(.wpcf7-form-control-wrap):before {

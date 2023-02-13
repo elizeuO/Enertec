@@ -158,9 +158,9 @@ Flex
     width: 75%;
 }
 
-.l__col-9-6 {
+.l__col-12 {
     @extend %flexColPatterns;
-    width: 80%;
+    width: 100%;
 }
 
 /*-------------------------------------------------------------------
@@ -187,6 +187,7 @@ img {
 
 .c__center {
     text-align: center;
+    text-align-last: center;
 }
 
 a {
@@ -484,7 +485,7 @@ Sections
 }
 
 .c-section--bg-balls {
-    background: url('/wp-content/themes/enertec/dist/img/bg-balls-gray.png') center center no-repeat;
+    background: url('/wp-content/themes/enertec/dist/img/bg-balls-gray.jpg') center center no-repeat;
     background-size: cover;
 
     .c-explanation {
@@ -558,6 +559,28 @@ Sections
 
 }
 
+.c-section--bg-balls-white{
+    background: url('/wp-content/themes/enertec/dist/img/bg-balls-white.jpg') center center no-repeat;
+    background-size: cover;
+
+    .c-contact{
+        margin-top: 30px;
+
+        a{
+            display: block;
+            margin-bottom: 10px;
+
+            &:hover, &:focus{
+                color: $colorBlue;
+            }
+        }
+
+        img{
+            vertical-align: middle;
+        }
+    }
+}
+
 /*-------------------------------------------------------------------
 Forms
 -------------------------------------------------------------------*/
@@ -611,7 +634,6 @@ form {
     }
 
     p:has(.wpcf7-form-control-wrap) {
-        display: inline-block;
         position: relative;
 
         &:before {
