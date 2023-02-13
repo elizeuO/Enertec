@@ -1,6 +1,6 @@
-<div class="c-section c-section--gray">
+<div class="c-section c-section--gray c__center">
     <div class="c__container">
-        <h2 class="c-title c-title--decoration c__center">
+        <h2 class="c-title c-title--decoration">
             Nosso instagram
         </h2>
 

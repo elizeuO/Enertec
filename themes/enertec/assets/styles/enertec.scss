@@ -29,6 +29,7 @@ $contentFontSize: 14px;
 $contentFontSizeBigger: 16px;
 $titleFontSize: 35px;
 $titleFontSizeBigger: 68px;
+$titleFontSizeSmaller: 20px;
 
 h1,
 h2,
@@ -61,13 +62,13 @@ p {
         background: $gradientHorizontal;
 
     }
+}
 
-    &.c__center {
-        &:before {
-            margin-left: auto;
-            margin-right: auto;
-            width: 12%;
-        }
+.c__center .c-title--decoration {
+    &:before {
+        margin-left: auto;
+        margin-right: auto;
+        width: 12%;
     }
 }
 
@@ -436,9 +437,44 @@ Sections
 }
 
 .c-section--solar-bg {
+    padding-bottom: 100px;
     background: url('/wp-content/themes/enertec/dist/img/bg-solar.png') center center no-repeat;
     background-size: cover;
     background-color: inherit;
+}
+
+.c-section--shape-bg {
+    position: relative;
+    margin-top: -115px;
+    padding-top: 115px;
+    background: url('/wp-content/themes/enertec/dist/img/bg-about.png') no-repeat;
+    background-size: cover;
+    color: white;
+
+    .c-about__text {
+        margin-bottom: 55px;
+
+        p {
+            margin-bottom: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 60%;
+        }
+    }
+
+    .c-about__value {
+        h3 {
+            margin: 5px 0;
+            font-size: $titleFontSizeSmaller;
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: 70%;
+
+        }
+    }
+
 }
 
 /*-------------------------------------------------------------------
@@ -547,6 +583,13 @@ Instagram
 }
 
 /*-------------------------------------------------------------------
+Whatsapp
+-------------------------------------------------------------------*/
+.wa__btn_popup_txt {
+    display: none;
+}
+
+/*-------------------------------------------------------------------
 Footer
 -------------------------------------------------------------------*/
 .c-footer {
@@ -563,7 +606,7 @@ Footer
         }
 
         h2 {
-            font-size: 20px;
+            font-size: $titleFontSizeSmaller;
         }
 
         a {

@@ -38,7 +38,8 @@ p {
   height: 5px;
   background: linear-gradient(90deg, #03e944, #19e7d1);
 }
-.c-title--decoration.c__center:before {
+
+.c__center .c-title--decoration:before {
   margin-left: auto;
   margin-right: auto;
   width: 12%;
@@ -366,9 +367,36 @@ Sections
 }
 
 .c-section--solar-bg {
+  padding-bottom: 100px;
   background: url("/wp-content/themes/enertec/dist/img/bg-solar.png") center center no-repeat;
   background-size: cover;
   background-color: inherit;
+}
+
+.c-section--shape-bg {
+  position: relative;
+  margin-top: -115px;
+  padding-top: 115px;
+  background: url("/wp-content/themes/enertec/dist/img/bg-about.png") no-repeat;
+  background-size: cover;
+  color: white;
+}
+.c-section--shape-bg .c-about__text {
+  margin-bottom: 55px;
+}
+.c-section--shape-bg .c-about__text p {
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+}
+.c-section--shape-bg .c-about__value h3 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+.c-section--shape-bg .c-about__value p {
+  margin: 0 auto;
+  max-width: 70%;
 }
 
 /*-------------------------------------------------------------------
@@ -469,6 +497,13 @@ Instagram
 
 .eapps-instagram-feed-posts-item-image {
   filter: none !important;
+}
+
+/*-------------------------------------------------------------------
+Whatsapp
+-------------------------------------------------------------------*/
+.wa__btn_popup_txt {
+  display: none;
 }
 
 /*-------------------------------------------------------------------
