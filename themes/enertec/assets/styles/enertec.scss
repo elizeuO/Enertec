@@ -38,6 +38,7 @@ h3 {
 
 p {
     margin: 0;
+    line-height: 20px;
 }
 
 .c-title {
@@ -176,6 +177,7 @@ img {
 a {
     @extend %transition;
     display: inline-block;
+    color: inherit;
     text-decoration: none;
     opacity: .8;
 
@@ -241,10 +243,6 @@ Header
         padding-top: 20px;
         padding-bottom: 20px;
         font-size: $contentFontSizeBigger;
-
-        .c-header__logo {
-            opacity: 1;
-        }
 
         .c-nav {
             .c-nav__link {
@@ -403,6 +401,7 @@ Sections
 
         p {
             font-size: $titleFontSize;
+            line-height: 35px;
         }
     }
 
@@ -444,7 +443,7 @@ form {
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 10%) 0 0 10px 3px;
 
-    &:before{
+    &:before {
         content: '';
         position: absolute;
         top: -3px;
@@ -476,7 +475,7 @@ form {
         }
 
         &:focus {
-           outline: none;
+            outline: none;
         }
     }
 
@@ -513,6 +512,45 @@ form {
         }
     }
 
+}
+
+/*-------------------------------------------------------------------
+Footer
+-------------------------------------------------------------------*/
+.c-footer {
+    color: white;
+
+    .c-footer__top {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: url('/wp-content/themes/enertec/dist/img/bg-footer.png') center center no-repeat;
+        background-size: cover;
+
+        .c-footer__logo {
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+
+            img {
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+    .c-footer__bottom {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background: $colorBlack;
+    }
 }
 
 /*-------------------------------------------------------------------

@@ -36,12 +36,12 @@
                     <nav class="c-nav l-flex__left">
 
                         <a href="https://api.whatsapp.com/send?phone=55119394012" target="_blank" class="c-nav__link">
-                            <img src="<?= getThemeImage('icon-white-whatsapp.png')?>">
+                            <img src="<?= getThemeImage('icon-white-whatsapp.png') ?>">
                             (11) 9. 3940-1207
                         </a>
 
                         <a href="mailto:orcamento@enertecrenovaveis.com.br" target="_blank" class="c-nav__link">
-                            <img ssrc="<?= getThemeImage('icon-white-email.png')?>">
+                            <img src="<?= getThemeImage('icon-white-email.png') ?>">
                             orcamento@enertecrenovaveis.com.br
                         </a>
                     </nav>
@@ -49,11 +49,12 @@
                     <nav class="c-nav l-flex__right">
 
                         <a href="https://www.instagram.com/enertecrenovaveis/" target="_blank" class="c-nav__link">
-                            <img src="<?= getThemeImage('icon-white-instagram.png')?>">
+                            <img src="<?= getThemeImage('icon-white-instagram.png') ?>">
                         </a>
 
-                        <a href="https://www.facebook.com/profile.php?id=100087409990967&mibextid=ZbWKwL" target="_blank" class="c-nav__link">
-                            <img src="<?= getThemeImage('icon-white-facebook.png')?>">
+                        <a href="https://www.facebook.com/profile.php?id=100087409990967&mibextid=ZbWKwL"
+                            target="_blank" class="c-nav__link">
+                            <img src="<?= getThemeImage('icon-white-facebook.png') ?>">
                         </a>
                     </nav>
 
@@ -61,46 +62,22 @@
             </div>
 
         </div>
-   
-   <div class="c-header__bottom">
-    <div class="c__container">
-        <div class="l-flex l-flex--center">
 
-        <a href="/" class="c-header__logo l-flex__left">
-            <img src="<?= getThemeImage('logo.png') ?>">
-        </a>
+        <div class="c-header__bottom">
+            <div class="c__container">
+                <div class="l-flex l-flex--center">
 
-        <nav class="c-nav">
-            <a href="#inicio" class="c-nav__link">
-                Início
-            </a>
+                    <a href="/" class="c-header__logo l-flex__left">
+                        <img src="<?= getThemeImage('logo.png') ?>">
+                    </a>
 
-            <a href="#sobre" class="c-nav__link">
-                Sobre
-            </a>
+                    <? include('menu.php'); ?>
 
-            <a href="#como-funciona" class="c-nav__link">
-                Como funciona
-            </a>
+                    <a href="#orcamento" class="c__button l-flex__right">
+                        Faça um orçamento
+                    </a>
 
-            <a href="#beneficios" class="c-nav__link">
-                Benefícios
-            </a>
-
-            <a href="#serviços" class="c-nav__link">
-                Serviços
-            </a>
-
-            <a href="#contato" class="c-nav__link">
-                Contato
-            </a>
-        </nav>
-
-        <a href="#orcamento" class="c__button l-flex__right">
-                Faça um orçamento
-        </a>
-
+                </div>
+            </div>
         </div>
-    </div>
-   </div>
     </header>
