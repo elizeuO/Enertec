@@ -291,7 +291,7 @@ Header
                 }
 
                 &:hover,
-                &:focus {
+                &:focus, &.active {
                     color: $colorBlue;
 
                     &:before {
