@@ -8,17 +8,6 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <!--    Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="<?= get_template_directory_uri(); ?>/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="<?= get_template_directory_uri(); ?>/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="<?= get_template_directory_uri(); ?>/assets/simages/favicon-16x16.png">
-    <link rel="manifest" href="<?= get_template_directory_uri(); ?>/assets/images/site.webmanifest">
-    <link rel="mask-icon" href="<?= get_template_directory_uri(); ?>/assets/images/safari-pinned-tab.svg"
-        color="#5bbad5">
-
     <title>
         Enertec | Empresa Brasileira de Projeto, Instalação e Homologação de Sistemas Fotovoltaicos
     </title>
@@ -27,7 +16,7 @@
 <?php wp_head(); ?>
 
 <body>
-    <header class="c-header">
+    <header class="c-header" id="header">
 
         <div class="c-header__top">
             <div class="c__container">

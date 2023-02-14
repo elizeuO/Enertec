@@ -222,6 +222,7 @@ Header
     z-index: 99;
 
     .c-header__top {
+        @extend %transition;
         padding-top: 10px;
         padding-bottom: 10px;
         background: $gradientHorizontal;
@@ -296,6 +297,18 @@ Header
                 }
             }
         }
+    }
+
+    &.sticky {
+        .c-header__top {
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+            .c-header__logo img {
+                max-height: 60px;
+            }
     }
 
 }
@@ -584,7 +597,7 @@ Sections
     }
 }
 
-.c-section--more-padding-top{
+.c-section--more-padding-top {
     padding-top: 90px;
 }
 

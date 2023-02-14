@@ -25,6 +25,9 @@ function registerScripts()
 
     wp_register_script('jquery', $path . 'jquery-3.6.3.min.js', array(), '3.6.3', true);
     wp_enqueue_script('jquery');
+
+    wp_register_script('enertec', $path . 'enertec.js', array(), '1.0.0', true);
+    wp_enqueue_script('enertec');
 }
 
 add_action('wp_enqueue_scripts', 'registerScripts');
