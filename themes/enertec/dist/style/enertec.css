@@ -428,6 +428,7 @@ Sections
 
 .c-section--bg-shape-inverted {
   position: relative;
+  margin-bottom: -45px;
   background: url("/wp-content/themes/enertec/dist/img/bg-benefits.png") no-repeat;
   background-size: cover;
   color: white;
@@ -484,6 +485,10 @@ Sections
 }
 .c-section--bg-balls-white .c-contact img {
   vertical-align: middle;
+}
+
+.c-section--more-padding-top {
+  padding-top: 90px;
 }
 
 /*-------------------------------------------------------------------
@@ -559,6 +564,51 @@ form p:has(.wpcf7-form-control-wrap):before {
 form p:has(.wpcf7-form-control-wrap):has(input:focus, select:focus, textarea:focus):before {
   content: "";
   background: linear-gradient(90deg, #03e944, #19e7d1);
+}
+
+/*-------------------------------------------------------------------
+Services
+-------------------------------------------------------------------*/
+.c-services {
+  margin-top: 70px;
+}
+.c-services .c-service {
+  position: relative;
+  padding: 80px 20px 40px;
+  height: 100%;
+  background: white;
+  color: #222;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px 3px;
+  border-radius: 10px;
+}
+.c-services .c-service img {
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.c-services .c-service:before, .c-services .c-service:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  background: linear-gradient(90deg, #03e944, #19e7d1);
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+.c-services .c-service:before {
+  top: -2px;
+  height: 4px;
+  width: 70%;
+}
+.c-services .c-service:after {
+  bottom: 0;
+  height: 5px;
+  width: 50%;
+}
+.c-services .c-service h3 {
+  color: #0e06ff;
+  font-size: 22px;
+  line-height: 30px;
 }
 
 /*-------------------------------------------------------------------

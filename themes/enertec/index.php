@@ -4,6 +4,7 @@
       include('section-sobre.php');
       include('section-como-funciona.php');
       include('section-beneficios.php');
+      include('section-servicos.php');
       include('section-contato.php');
       include('section-instagram.php');
       include('partials/footer.php');

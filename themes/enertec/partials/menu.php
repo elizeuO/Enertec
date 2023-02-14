@@ -15,7 +15,7 @@
                             Benefícios
                         </a>
 
-                        <a href="#serviços" class="c-nav__link">
+                        <a href="#servicos" class="c-nav__link">
                             Serviços
                         </a>
 

@@ -511,29 +511,31 @@ Sections
 
 .c-section--bg-shape-inverted {
     position: relative;
+    margin-bottom: -45px;
     background: url('/wp-content/themes/enertec/dist/img/bg-benefits.png') no-repeat;
     background-size: cover;
     color: white;
 
-    .c-benefits{
+    .c-benefits {
         margin-top: 40px;
 
-        .c-benefit{
+        .c-benefit {
             position: relative;
             padding: 50px 20px 20px;
             height: 100%;
             background: white;
             color: $colorBlack;
             border-radius: 10px;
-    
-            img{
+
+            img {
                 position: absolute;
                 top: -29px;
                 left: 50%;
                 transform: translateX(-50%);
             }
-    
-            &:before, &:after{
+
+            &:before,
+            &:after {
                 content: '';
                 position: absolute;
                 left: 50%;
@@ -541,44 +543,49 @@ Sections
                 border-radius: 20px;
                 transform: translateX(-50%);
             }
-    
-            &:before{
+
+            &:before {
                 top: -2px;
                 height: 4px;
                 width: 70%;
             }
-    
-            &:after{
+
+            &:after {
                 bottom: 0;
                 height: 5px;
                 width: 50%;
             }
         }
     }
-    
+
 
 }
 
-.c-section--bg-balls-white{
+.c-section--bg-balls-white {
     background: url('/wp-content/themes/enertec/dist/img/bg-balls-white.jpg') center center no-repeat;
     background-size: cover;
 
-    .c-contact{
+    .c-contact {
         margin-top: 30px;
 
-        a{
+        a {
             display: block;
             margin-bottom: 10px;
 
-            &:hover, &:focus{
+            &:hover,
+            &:focus {
                 color: $colorBlue;
             }
         }
 
-        img{
+        img {
             vertical-align: middle;
         }
     }
+}
+
+.c-section--more-padding-top{
+    padding-top: 90px;
 }
 
 /*-------------------------------------------------------------------
@@ -656,6 +663,58 @@ form {
             @extend %transition;
             content: "";
             background: $gradientHorizontal;
+        }
+    }
+}
+
+/*-------------------------------------------------------------------
+Services
+-------------------------------------------------------------------*/
+.c-services {
+    margin-top: 70px;
+
+    .c-service {
+        position: relative;
+        padding: 80px 20px 40px;
+        height: 100%;
+        background: white;
+        color: $colorBlack;
+        box-shadow: $shadow;
+        border-radius: 10px;
+
+        img {
+            position: absolute;
+            top: -46px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            background: $gradientHorizontal;
+            border-radius: 20px;
+            transform: translateX(-50%);
+        }
+
+        &:before {
+            top: -2px;
+            height: 4px;
+            width: 70%;
+        }
+
+        &:after {
+            bottom: 0;
+            height: 5px;
+            width: 50%;
+        }
+
+        h3 {
+            color: $colorBlue;
+            font-size: 22px;
+            line-height: 30px;
         }
     }
 
