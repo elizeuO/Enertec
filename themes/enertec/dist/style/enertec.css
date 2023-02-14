@@ -53,7 +53,7 @@ p {
 /*-------------------------------------------------------------------
 Transition
 -------------------------------------------------------------------*/
-form p:has(.wpcf7-form-control-wrap):has(input:focus, select:focus, textarea:focus):before, form p:has(.wpcf7-form-control-wrap):before, form input,
+form article > p:before, form input,
 form textarea,
 form select, .c__button:before, .c-header .c-header__bottom .c-nav .c-nav__link:before, .c-header .c-header__top, a {
   transition: all 300ms;
@@ -84,6 +84,10 @@ Flex
   margin-right: -12px;
 }
 
+.l-flex--negative-right {
+  margin-right: -12px;
+}
+
 .l-flex--vertical {
   flex-direction: column;
 }
@@ -98,6 +102,10 @@ Flex
 
 .l__col-12, .l__col-9, .l__col-8, .l__col-6, .l__col-4, .l__col-3, .l__col-2-4 {
   padding: 12px;
+}
+
+.l__col--less-padding {
+  padding: 0 12px 12px 0;
 }
 
 .l__col-2-4 {
@@ -558,10 +566,10 @@ form .wpcf7-not-valid-tip {
   top: 170%;
   left: 8px;
 }
-form p:has(.wpcf7-form-control-wrap) {
+form article > p {
   position: relative;
 }
-form p:has(.wpcf7-form-control-wrap):before {
+form article > p:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -573,8 +581,7 @@ form p:has(.wpcf7-form-control-wrap):before {
   mask-composite: exclude;
   z-index: 1;
 }
-form p:has(.wpcf7-form-control-wrap):has(input:focus, select:focus, textarea:focus):before {
-  content: "";
+form article > p.active:before {
   background: linear-gradient(90deg, #03e944, #19e7d1);
 }
 

@@ -112,6 +112,10 @@ Flex
     margin-right: -12px;
 }
 
+.l-flex--negative-right {
+    margin-right: -12px;
+}
+
 .l-flex--vertical {
     flex-direction: column;
 }
@@ -126,6 +130,10 @@ Flex
 
 %flexColPatterns {
     padding: 12px;
+}
+
+%flexColLessPadding {
+    padding: 0 12px 12px 0;
 }
 
 .l__col-2-4 {
@@ -161,6 +169,10 @@ Flex
 .l__col-12 {
     @extend %flexColPatterns;
     width: 100%;
+}
+
+.l__col--less-padding{
+    @extend %flexColLessPadding; 
 }
 
 /*-------------------------------------------------------------------
@@ -291,7 +303,8 @@ Header
                 }
 
                 &:hover,
-                &:focus, &.active {
+                &:focus,
+                &.active {
                     color: $colorBlue;
 
                     &:before {
@@ -657,7 +670,7 @@ form {
         left: 8px;
     }
 
-    p:has(.wpcf7-form-control-wrap) {
+    article > p {
         position: relative;
 
         &:before {
@@ -676,9 +689,7 @@ form {
             z-index: 1;
         }
 
-        &:has(input:focus, select:focus, textarea:focus):before {
-            @extend %transition;
-            content: "";
+        &.active:before {
             background: $gradientHorizontal;
         }
     }

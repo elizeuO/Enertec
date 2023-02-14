@@ -42,3 +42,18 @@ function toggleActiveLink() {
     }
   }
 }
+
+function toggleActiveFormField(ev){
+  let field = ev.target.closest('p input') || ev.target.closest('p textarea');
+  if(null === field){return;}
+
+  field.closest('p').classList.toggle('active');
+}
+
+document.addEventListener('focusin', (ev)=>{
+  toggleActiveFormField(ev);
+});
+
+document.addEventListener('focusout', (ev)=>{
+  toggleActiveFormField(ev);
+});
