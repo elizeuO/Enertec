@@ -157,6 +157,10 @@ body {
   font-family: sans-serif;
 }
 
+:focus {
+  outline: none;
+}
+
 img {
   max-width: 100%;
 }
