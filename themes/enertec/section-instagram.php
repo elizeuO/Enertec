@@ -4,6 +4,6 @@
             Nosso instagram
         </h2>
 
-        <?= do_shortcode('[elfsight_instagram_feed id="1"]')?>
+        <?= do_shortcode('[instagram-feed feed=1]')?>
     </div>
 </div>

@@ -53,7 +53,7 @@ p {
 /*-------------------------------------------------------------------
 Transition
 -------------------------------------------------------------------*/
-form article > p:before, form input,
+.sbi_photo:before, form article > p:before, form input,
 form textarea,
 form select, .c__button:before, .c-header .c-header__bottom .c-nav .c-nav__link:before, .c-header .c-header__bottom .c-nav, .c-header .c-header__top, a {
   transition: all 300ms;
@@ -682,25 +682,25 @@ Services
 /*-------------------------------------------------------------------
 Instagram
 -------------------------------------------------------------------*/
-.elfsight-widget-instagram-feed {
+#sb_instagram {
   margin-top: 35px;
 }
 
-.eapps-instagram-feed-posts-grid-load-more {
-  display: none;
+.sbi_photo {
+  position: relative;
 }
-
-#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-overlay {
+.sbi_photo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(90deg, rgba(3, 233, 68, 0.7607843137), rgba(25, 231, 209, 0.7411764706)) !important;
+  opacity: 0;
 }
-
-.eapps-instagram-feed-posts-item-link:hover .eapps-instagram-feed-posts-item-media:after,
-.eapps-instagram-feed-posts-item-link:focus .eapps-instagram-feed-posts-item-media:after {
+.sbi_photo:hover:before, .sbi_photo:focus:before {
   opacity: 1;
-}
-
-.eapps-instagram-feed-posts-item-image {
-  filter: none !important;
 }
 
 /*-------------------------------------------------------------------
@@ -812,7 +812,8 @@ Responsive
   .l__col-2-4 {
     width: 33.33%;
   }
-  .c-contact .c-nav__link img, .c-footer .c-nav__link img {
+  .c-contact .c-nav__link img,
+.c-footer .c-nav__link img {
     display: block;
     margin: 0 auto 10px auto !important;
   }
@@ -845,7 +846,8 @@ Responsive
   }
 }
 @media (max-width: 572px) {
-  .c-header__top, .c-header .c__button {
+  .c-header__top,
+.c-header .c__button {
     display: none;
   }
   .c-section--video-bg {
