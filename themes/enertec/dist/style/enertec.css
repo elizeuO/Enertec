@@ -848,7 +848,7 @@ Responsive
     margin-top: 112px;
   }
   .c-header:not(.sticky) .c-header__bottom .c-nav__link {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
 @media (max-width: 478px) {
