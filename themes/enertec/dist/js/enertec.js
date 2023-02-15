@@ -43,17 +43,39 @@ function toggleActiveLink() {
   }
 }
 
-function toggleActiveFormField(ev){
-  let field = ev.target.closest('p input') || ev.target.closest('p textarea');
-  if(null === field){return;}
+function toggleActiveFormField(ev) {
+  let field = ev.target.closest("p input") || ev.target.closest("p textarea");
+  if (null === field) {
+    return;
+  }
 
-  field.closest('p').classList.toggle('active');
+  field.closest("p").classList.toggle("active");
 }
 
-document.addEventListener('focusin', (ev)=>{
+document.addEventListener("focusin", (ev) => {
   toggleActiveFormField(ev);
 });
 
-document.addEventListener('focusout', (ev)=>{
+document.addEventListener("focusout", (ev) => {
   toggleActiveFormField(ev);
+});
+
+function handleInputFile(ev) {
+  const inputFile = ev.target.closest(".js-file input");
+  if (null === inputFile) {
+    return;
+  }
+
+  const field = inputFile.closest(".js-file");
+  const message = field.querySelector(".js-file-message");
+
+  if (message) {
+    message.innerHTML = inputFile.value;
+  }
+
+  field.classList.add("active");
+}
+
+document.addEventListener("change", (ev) => {
+  handleInputFile(ev);
 });

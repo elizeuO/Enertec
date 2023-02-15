@@ -40,7 +40,7 @@
             </article>
 
             <article class="l__col-6">
-                <?= do_shortcode('[contact-form-7 id="7" title="Contato"]') ?>
+                <?= do_shortcode('[contact-form-7 id="50" title="Contato"]') ?>
             </article>
         </div>
     </div>

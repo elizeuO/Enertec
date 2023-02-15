@@ -171,8 +171,8 @@ Flex
     width: 100%;
 }
 
-.l__col--less-padding{
-    @extend %flexColLessPadding; 
+.l__col--less-padding {
+    @extend %flexColLessPadding;
 }
 
 /*-------------------------------------------------------------------
@@ -334,6 +334,11 @@ Header
 /*-------------------------------------------------------------------
 Buttons
 -------------------------------------------------------------------*/
+button {
+    background: none;
+    border: none;
+}
+
 .c__button {
     display: inline-block;
     position: relative;
@@ -664,13 +669,49 @@ form {
         }
     }
 
-    .wpcf7-not-valid-tip {
-        position: absolute;
-        top: 170%;
-        left: 8px;
+    button {
+        display: block !important;
+        margin: 10px auto 0;
+
+        &:hover,
+        &:focus {
+            background: $colorBlue;
+            border-radius: 10px;
+        }
     }
 
-    article > p {
+    .c-file {
+        position: relative;
+        padding: 6px 8px;
+        border: 2px dashed $colorGray;
+        border-radius: 10px;
+
+        &.active {
+            color: $colorLeafGreen;
+            border-color: $colorLeafGreen;
+        }
+
+        .wpcf7-form-control-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+        }
+    }
+
+    .wpcf7-not-valid-tip {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .wpcf7-response-output{
+        text-align: center;
+    }
+
+    article>p {
         position: relative;
 
         &:before {

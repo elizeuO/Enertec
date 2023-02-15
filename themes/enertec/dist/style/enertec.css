@@ -262,6 +262,11 @@ Header
 /*-------------------------------------------------------------------
 Buttons
 -------------------------------------------------------------------*/
+button {
+  background: none;
+  border: none;
+}
+
 .c__button {
   display: inline-block;
   position: relative;
@@ -561,10 +566,39 @@ form textarea:focus,
 form select:focus {
   outline: none;
 }
-form .wpcf7-not-valid-tip {
+form button {
+  display: block !important;
+  margin: 10px auto 0;
+}
+form button:hover, form button:focus {
+  background: #0e06ff;
+  border-radius: 10px;
+}
+form .c-file {
+  position: relative;
+  padding: 6px 8px;
+  border: 2px dashed #eee;
+  border-radius: 10px;
+}
+form .c-file.active {
+  color: #1bd741;
+  border-color: #1bd741;
+}
+form .c-file .wpcf7-form-control-wrap {
   position: absolute;
-  top: 170%;
-  left: 8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+form .wpcf7-not-valid-tip {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+form .wpcf7-response-output {
+  text-align: center;
 }
 form article > p {
   position: relative;
