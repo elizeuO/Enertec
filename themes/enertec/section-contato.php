@@ -13,7 +13,7 @@
                     a melhor experiência de atentimento!
                 </p>
 
-                <a href="https://api.whatsapp.com/send?phone=55119394012" target="_blank" class="c__button-green">
+                <a href="https://api.whatsapp.com/send?phone=5511939401207" target="_blank" class="c__button-green">
 
                     <img src="<?= getThemeImage('/icon-white-whatsapp.png') ?>">
                     Fale com a gente
@@ -21,7 +21,7 @@
 
                 <nav class="c-nav c-contact">
 
-                    <a href="https://api.whatsapp.com/send?phone=55119394012" target="_blank" class="c-nav__link">
+                    <a href="https://api.whatsapp.com/send?phone=5511939401207" target="_blank" class="c-nav__link">
                         <img src="<?= getThemeImage('icon-whatsapp.png') ?>">
                         (11) 9. 3940-1207
                     </a>

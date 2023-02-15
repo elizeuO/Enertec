@@ -13,7 +13,7 @@
                     bolso e para o nosso planeta!
                 </p>
 
-                <a href="https://api.whatsapp.com/send?phone=55119394012" target="_blank"
+                <a href="https://api.whatsapp.com/send?phone=5511939401207" target="_blank"
                     class="c__button-green">
 
                     <img src="<?= getThemeImage('/icon-white-whatsapp.png') ?>">
