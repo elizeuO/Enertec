@@ -70,7 +70,7 @@ function handleInputFile(ev) {
   const message = field.querySelector(".js-file-message");
 
   if (message) {
-    message.innerHTML = inputFile.value;
+    message.innerHTML = 'Arquivo anexado: ' + inputFile.value;
   }
 
   field.classList.add("active");

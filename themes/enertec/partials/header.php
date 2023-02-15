@@ -20,7 +20,7 @@
 
         <div class="c-header__top">
             <div class="c__container">
-                <div class="l-flex l-flex--center">
+                <div class="l-flex l-flex--center c__mobile-full">
 
                     <nav class="c-nav l-flex__left">
 
@@ -61,6 +61,9 @@
                     </a>
 
                     <? include('menu.php'); ?>
+                    <div class="c-header__mobile-menu">
+                        <img src="<?= getThemeImage('menu.png')?>">
+                    </div>
 
                     <a href="#orcamento" class="c__button l-flex__right">
                         Faça um orçamento

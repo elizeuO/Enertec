@@ -58,15 +58,18 @@
     </div>
     <div class="c-footer__bottom">
         <div class="c__container">
-            <div class="l-flex l-flex--center">
+            <div class="l-flex l-flex--center c__mobile-full">
                 <div class="l-flex__left">
                     Copyright ©
                     <?= date("Y") ?> Enertec - Todos os direitos reservados
                 </div>
 
                 <div class="l-flex__right">
-                    <a href="https://api.whatsapp.com/send?phone=5564999653668" target="__blank">Desenvolvido por Elizeu
-                        Oliveira</a>
+                    <div class="c-signature">
+                        <a href="https://api.whatsapp.com/send?phone=5564999653668" target="__blank">Desenvolvido por
+                            Elizeu
+                            Oliveira</a>
+                    </div>
                 </div>
             </div>
         </div>
