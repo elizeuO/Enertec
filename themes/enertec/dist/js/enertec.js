@@ -79,3 +79,14 @@ function handleInputFile(ev) {
 document.addEventListener("change", (ev) => {
   handleInputFile(ev);
 });
+
+function handleMobileMenu(ev){
+  const mobileMenu = ev.target.closest('.js-mobile-menu');
+  if(null === mobileMenu){return;}
+
+  mobileMenu.classList.toggle('active');
+}
+
+document.addEventListener('click', (ev)=>{
+  handleMobileMenu(ev)
+});

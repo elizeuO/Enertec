@@ -60,10 +60,11 @@
                         <img src="<?= getThemeImage('logo.png') ?>">
                     </a>
 
-                    <? include('menu.php'); ?>
-                    <div class="c-header__mobile-menu">
-                        <img src="<?= getThemeImage('menu.png')?>">
+                    <div class="c-header__mobile-menu js-mobile-menu">
+                        <img src="<?= getThemeImage('menu.png') ?>">
                     </div>
+
+                        <? include('menu.php'); ?>
 
                     <a href="#orcamento" class="c__button l-flex__right">
                         Faça um orçamento
