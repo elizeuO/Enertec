@@ -197,6 +197,10 @@ body {
     font-family: $mainFont;
 }
 
+:focus{
+    outline: none;
+}
+
 img {
     max-width: 100%;
 }
