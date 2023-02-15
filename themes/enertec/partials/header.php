@@ -24,7 +24,7 @@
 
                     <nav class="c-nav l-flex__left">
 
-                        <a href="https://api.whatsapp.com/send?phone=55119394012" target="_blank" class="c-nav__link">
+                        <a href="https://api.whatsapp.com/send?phone=5511939401207" target="_blank" class="c-nav__link">
                             <img src="<?= getThemeImage('icon-white-whatsapp.png') ?>">
                             (11) 9. 3940-1207
                         </a>
